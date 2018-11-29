@@ -157,7 +157,7 @@ START_TEST(test_2d_area_triangle){
     c.x = 21;
     c.y = 5;
     double value = 200;
-    ck_assert_double_eq(value, coord_2d_area_triangle(&a, &b, &c));
+    ck_assert(coord_2d_area_triangle(&a, &b, &c) == value);
 
     a.x = 5;
     a.y = 10;
@@ -166,7 +166,7 @@ START_TEST(test_2d_area_triangle){
     c.x = 20;
     c.y = 10;
     value = 187.50;
-    ck_assert_double_eq(value, coord_2d_area_triangle(&a, &b, &c));
+    ck_assert(coord_2d_area_triangle(&a, &b, &c) == value);
 }
 END_TEST
 
